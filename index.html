@@ -8,8 +8,33 @@
     <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
 </head>
 <body class="bg-light mt-5 pt-2" onresize="show_all()">
+   <!-- Pop-up alert -->
+
+   <div id="popupBody" class="popup-body animate__animated animate__fadeIn">
+    <div id="popup" class="animate__animated animate__zoomIn animate__delay-2s">
+       <p>Welcome to our web code editor!</p>
+       <p>Explore the simplicity of coding and unleash your creativity.</p>
+       <button id="cancelButton" class="button-6" role="button">Start Coding</button>
+
+
+
+    </div>
+ </div>
+ 
+
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home">Online Live Web Code Editor</a>
@@ -30,7 +55,7 @@
             </div>
             <div class="col-3">
                 <div class="container-fluid p-0">
-                    <button class="btn btn-light w-100 p-1 border rounded" onclick="show('js')">JS</button>
+                    <button class="btn btn-light w-100 p-1 border rounded" onclick="show('js')">JavaScript</button>
                 </div>
             </div>
             <div class="col-3">
@@ -40,20 +65,20 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12" id="html">
+        <div class="row ">
+            <div class="col-lg-4 col-md-12 col-sm-12 animate__animated animate__fadeIn " id="html">
                 <div class="container-fluid border rounded p-1 bg-dark text-light editor">
                     <textarea id="htmlCode" placeholder="HTML Code" 
 					oninput="showPreview()"></textarea>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12" id="css">
+            <div class="col-lg-4 col-md-12 col-sm-12 animate__animated animate__fadeIn animate__delay-1s " id="css">
                 <div class="container-fluid border rounded p-1 bg-dark text-light editor">
                     <textarea id="cssCode" placeholder="CSS Code" 
 					oninput="showPreview()"></textarea>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12" id="js">
+            <div class="col-lg-4 col-md-12 col-sm-12 animate__animated animate__fadeIn animate__delay-2s" id="js">
                 <div class="container-fluid border rounded p-1 bg-dark text-light editor">
                     <textarea id="jsCode" placeholder="JavaScript Code" 
 					oninput="showPreview()"></textarea>
