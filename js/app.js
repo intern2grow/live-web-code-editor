@@ -12,7 +12,7 @@ function showPreview() {
     const cssCode = cssCodeInput.value;
     const jsCode = jsCodeInput.value;
     const frame = document.getElementById("preview-window").contentWindow.document;
-    
+
     frame.open();
     frame.write(`${htmlCode}${cssCode}${jsCode}`);
     frame.close();
@@ -20,7 +20,7 @@ function showPreview() {
 
 function show(sectionId) {
     const sections = ["html", "css", "js", "result"];
-    
+
     sections.forEach((section) => {
         const element = document.getElementById(section);
         element.style.display = section === sectionId ? "block" : "none";
@@ -32,7 +32,7 @@ function showAll() {
     const cssElement = document.getElementById("css");
     const jsElement = document.getElementById("js");
     const resultElement = document.getElementById("result");
-    
+
     if (window.innerWidth >= 992) {
         htmlElement.style.display = "block";
         cssElement.style.display = "block";
@@ -49,7 +49,7 @@ function showAll() {
 
 window.addEventListener("resize", showAll);
 
-window.onload = function() {
+window.onload = function () {
     var preloader = document.getElementById("preloader");
     preloader.style.display = "none";
 };
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("popupBody").style.display = "block";
 
         document.getElementById("popup").style.display = "block";
-        
+
     }
 
     document.getElementById("cancelButton").addEventListener("click", function () {
